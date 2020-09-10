@@ -37,6 +37,11 @@ const Account = {
     requests.get('/v3/accounts')
 };
 
+const Trade = {
+  list: (accountId) =>
+    requests.get(`/v3/accounts/${accountId}/trades`)
+};
+
 const Order = {
   list: (accountId) =>
     requests.get(`/v3/accounts/${accountId}/orders`)
@@ -48,5 +53,5 @@ const Pricing = {
 };
 
 module.exports = {
-  Account, Pricing, Instrument, Order
+  Account, Pricing, Instrument, Order, Trade
 }
