@@ -1,0 +1,10 @@
+{
+  "name": "oanda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^6.1.0",
+    "superagent-promise": "^1.1.0"
+  }
+}
