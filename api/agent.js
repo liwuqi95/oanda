@@ -27,6 +27,11 @@ const requests = {
     superagent.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
 };
 
+const Instrument = {
+  list: () =>
+    requests.get('/v3/instruments')
+};
+
 const Account = {
   list: () =>
     requests.get('/v3/accounts')
@@ -38,5 +43,5 @@ const Pricing = {
 };
 
 module.exports = {
-  Account, Pricing
+  Account, Pricing, Instrument
 }

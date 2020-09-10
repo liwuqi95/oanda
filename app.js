@@ -8,8 +8,9 @@ const main = async () => {
   accountID = response0.accounts[0].id;
 
 
-  agent.Pricing.pricing(accountID, 'WTI').then(response => console.log(response))
+  agent.Instrument.list().then((response) => console.log(response));
 
+  agent.Pricing.pricing(accountID, 'WTI').then(response => console.log(response));
 }
 
 main();
