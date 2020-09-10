@@ -4,11 +4,11 @@ let accountID = null;
 
 
 const main = async () => {
-  let response = await agent.Account.list();
-  accountID = response.accounts[0].id;
+  let response0 = await agent.Account.list();
+  accountID = response0.accounts[0].id;
 
 
-  agent.Pricing.pricing(accountID, 'EUR_USD').then(response => console.log(response))
+  agent.Pricing.pricing(accountID, 'WTI').then(response => console.log(response))
 
 }
 
