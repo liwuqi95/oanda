@@ -29,17 +29,14 @@ const requests = {
 
 const Account = {
   list: () =>
-    requests.get('/v3/accounts'),
-  current: () =>
-    requests.get('/users/current'),
-  validatePassword: (user) =>
-    requests.post(`/users/validate_password`, {user}),
-  update: (user) =>
-    requests.put('/users/' + user.id, {user}),
-  logout: () =>
-    requests.post('/users/logout')
+    requests.get('/v3/accounts')
+};
+
+const Pricing = {
+  pricing: (accountId, instruments, since = '') =>
+    requests.get(`/v3/accounts/${accountId}/pricing?instruments=${instruments}&since=${since}`)
 };
 
 module.exports = {
-  Account,
+  Account, Pricing
 }

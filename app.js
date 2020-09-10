@@ -1,5 +1,13 @@
 const agent = require('./api/agent');
 
-agent.Account.list().then(response => {
-  console.log(response)
-})
+let accountID = null;
+
+
+const main = async () => {
+  let response = await agent.Account.list();
+  accountID = response.data.accounts[0].id;
+
+
+  agent.Pricing.pricing(accountID, 'EUR_USD').then(response => console.log(response))
+
+}
