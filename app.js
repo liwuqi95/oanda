@@ -9,7 +9,7 @@ const main = async () => {
 
 
   agent.Instrument.list().then((response) => console.log(response));
-
+  agent.Order.list().then((response) => console.log(response));
   agent.Pricing.pricing(accountID, 'WTI').then(response => console.log(response));
 }
 
