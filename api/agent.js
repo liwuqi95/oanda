@@ -38,8 +38,8 @@ const Account = {
 };
 
 const Order = {
-  list: () =>
-    requests.get('/v3/orders')
+  list: (accountId) =>
+    requests.get(`/v3/accounts/${accountId}/orders`)
 };
 
 const Pricing = {
