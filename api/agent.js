@@ -34,7 +34,7 @@ const Account = {
 
 const Pricing = {
   pricing: (accountId, instruments, since = '') =>
-    requests.get(`/v3/accounts/${accountId}/pricing?instruments=${instruments}&since=${since}`)
+    requests.get(`/v3/accounts/${accountId}/pricing?instruments=${instruments}`)
 };
 
 module.exports = {
